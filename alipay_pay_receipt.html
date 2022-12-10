@@ -1,0 +1,190 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .material-symbols-outlined {
+            color: #196aa9;
+            font-size: 30px;
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 700,
+            'GRAD' 200,
+            'opsz' 48
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
+        body{
+            font-family: 'Noto Sans HK', sans-serif;
+        }
+        p{
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+
+            font-size: 16px;
+        }
+        h1{
+            font-size: 30px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        #style_image_line{
+            background-color: #196aa9;
+            height: 4px;
+            border: 1px solid #196aa9;
+            width: 130px;float: left;
+            margin-left: 26px;
+        }
+        #finaly_background_receipt{
+            width: fit-content;
+            border-radius: 30px;
+            border: 4px dashed #000000;
+            /* text-align: center; */
+        }
+        #style_image{
+            text-align: center;
+        }
+        #pay_tool_logo{
+            margin-left: -20px;
+            width: 140px;
+        }
+        #try_to_print{
+            width: 160px;
+            background-color: #ffffff;
+            border: 4px solid #f9a647;
+            font-size: 26px;
+            height: auto;
+            margin-top: 20px;
+
+            border-radius: 30px;
+            transition-duration: 0.4s;
+        }
+        #try_to_print:hover{
+            width: 180px;
+            color: #ffffff;
+            background-color: #f9a647;
+            font-size: 36px;
+        }
+        .for_the_receipt{
+            margin-left: 30px;
+        }
+        #background_round{
+            display: inline-flex;
+        }
+
+        @media only screen and (max-width:800px){
+            #background_round{
+                display: block;
+            }
+            #produce_list{
+                margin-left: 20px;
+                font-size: 10px;
+            }
+            .for_the_receipt{
+                margin-left: 20px;
+            }
+            #style_image_line{
+                display: none;
+            }
+        }
+    </style>
+    <script>
+            let try_to_print=document.getElementById("try_to_print")
+            try_to_print.addEventListener("click",function(){
+                print()
+            })
+
+            function print_web(){
+                print()
+            }
+    </script>
+</head>
+<body>
+    <div id="finaly_background_receipt">
+        <div id="background_round">
+            <div id="style_image">
+                <img src="https://raw.githubusercontent.com/infinityMark/-infinityMark.github.io/main/logo_full.png" alt="" style="width: 200px;margin-top: 20px;text-align: center;">
+                <h1 style="color:#1684b9;">餘慶小鋪</h1>
+                <br>
+                <img src="https://raw.githubusercontent.com/infinityMark/-infinityMark.github.io/main/alipay_small.png" alt="" id="pay_tool_logo">
+                <hr id="style_image_line">
+            </div>
+            <br>
+            <div>
+
+            </div>
+            <div id="produce_list">
+                <h3 style="width: fit-content;background-color: #fcecc2;color: #000000;">&nbsp;商品信息&nbsp;</h3>
+                <table>
+                    <tr><td><p>華爲Mate50Pro 12(RAM)+512(ROM)</p></td><td><p></p></td><td><p>x1</p></td><td><p>$6099</p></td></tr>
+                    <tr><td><p>小米12S Ultra 12(RAM)+512(ROM)</p></td><td><p></p></td><td><p>x1</p></td><td><p>$6099</p></td></tr>
+                    <tr><td><p>iPhone se3 4(RAM)+64(ROM)</p></td><td><p></p></td><td><p>x1</p></td><td><p>$3299</p></td></tr>
+                    <tr><td><p>三星S22 Ultra 12(RAM)+256(ROM)</p></td><td><p></p></td><td><p>x1</p></td><td><p>$8799</p></td></tr>
+                    <tr><td><p>華爲MateXs2 8(RAM)+128(ROM)</p></td><td><p></p></td><td><p>x1</p></td><td><p>$1999</p></td></tr>
+                    <tr><td><p>小米6 4(RAM)+64(ROM)</p></td><td><p></p></td><td><p>x2</p></td><td><p>$3998</p></td></tr>
+                </table>
+                <hr style="border: 4px solid #fcecc2;width: 130px;float: left;">
+            </div>
+            <br>
+            <br>
+            <div id="person_information" class="for_the_receipt">
+                <h3 style="width: fit-content;background-color: #0f80b2;color: #ffffff;">&nbsp;訂單信息&nbsp;</h3>
+                <table>
+                    <tr><td><p>賬戶昵稱：</p></td></tr>
+                    <tr><td><p>月下逢</p></td></tr>
+                    <tr><td><p>賬戶ID：</p></td></tr>
+                    <tr><td><p>975394</p></td></tr>
+                    <tr><td><p>電郵地址：</p></td></tr>
+                    <tr><td><p>moon@gmail.com</p></td></tr>
+                    <tr><td><p>收貨地址：</p></td></tr>
+                    <tr><td><p>九龍觀塘區</p></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><p>一處神祕的地點</p></td></tr>
+                    <tr><td><p>交易日期：</p></td></tr>
+                    <tr><td><p>2022年12月15號21點21分</p></td></tr>
+                    <tr><td><p>交易單號：</p></td></tr>
+                    <tr><td><p>3402837</p></td></tr>
+                </table>
+                <hr style="border: none;width: 130px;float: left;height: 8px;background-color: #0f80b2;">
+            </div>
+            <br>
+            <br>
+            <div class="for_the_receipt">
+                <h3 style="width: fit-content;background-color: #e0d03e;color: #ffffff;">&nbsp;交易信息&nbsp;</h3>
+                <p>HK支付寶<br>成功支付<span class="material-symbols-outlined">
+                    verified
+                    </span></p>
+                <p>總數：$30293(港幣)</p>
+                <p>順風快遞</p>
+                <p>(免運費)</p>
+                <hr style="border: none;width: 130px;float: left;height: 8px;background-color: #e0d03e;">    
+            </div>
+            
+            <br>
+            <br>
+            <div id="connection" class="for_the_receipt">
+                <h3 style="width: fit-content;background-color: #f82239;color: #ffffff;">&nbsp;售後聯絡&nbsp;</h3>
+                <p>電郵：</p>
+                <a href="mailto:s181053@chusheklun.edu.hk?subject=你好&body=我是網站的顧客">
+                    <p>s181053@chusheklun.edu.hk</p></a>
+                <p>電話：</p>    
+                <a href="tel:+85299999999">
+                    <p>9999 9999</p></a>
+                <p>社交媒體</p>
+                <a href="https://www.instagram.com/yuqing_smallshop/"><p><img src="https://raw.githubusercontent.com/infinityMark/-infinityMark.github.io/main/phone_qrcode_black_close.png" alt="" style="width: 40%"></p></a>
+                <a href="https://www.facebook.com/profile.php?id=100087245058933"><p><img src="https://raw.githubusercontent.com/infinityMark/-infinityMark.github.io/main/phone_facebook_black_close.png" alt="" style="width: 40%;"></p></a>
+                <p>售後地點：</p>
+                <a href="https://www.google.com/maps/place/%E4%B9%9D%E9%BE%8D%E7%81%A3%E5%95%93%E6%A8%82%E8%A1%9711%E8%99%9F/data=!4m2!3m1!1s0x340406cb07887a81:0xb812f5e40696143c?sa=X&ved=2ahUKEwi3lq-NqO77AhUIs1YBHarkDbEQ8gF6BAgVEAE"><p>九龍灣啓樂街11號</p></a>
+                <hr style="border: none;width: 130px;float: left;height: 8px;background-color: #f82239;margin-bottom: 20px;">    
+            </div>
+        </div>
+    </div>
+    <button id="try_to_print" onclick="print_web()">打印</button>    
+</body>
+</html>
