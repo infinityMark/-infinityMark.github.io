@@ -1,0 +1,130 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
+        body{
+            font-family: 'Noto Sans HK', sans-serif;
+        }
+        h1{
+            font-size: 20px;
+        }
+        #show_phone_move_background{
+            /* border: 3px solid #a2a2a2; */
+            border-radius: 40px;
+            justify-self: center;
+            /* width: 300px; */
+            width: 500px;
+            text-align: center;
+            background-color: #FFFFFF;
+            color: #ff6700;
+
+            transition-duration: 0.4s;
+
+            position: absolute;
+            margin-top: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #show_phone_move_background:hover{
+            width: 300px;
+            color: #FFFFFF;
+            background-color: #458df1;
+        }
+
+
+        img{
+            text-align: center;
+            /* width: 300px; */
+            width: 80%
+        }
+        /* img:hover{
+            transition-duration: 0.4s;
+            width: 70%;
+        }  */
+        #xiaomis12ultra_buy_btn{
+            border-radius: 30px;
+            width: 160px;
+            height: auto;
+            background-color: #FFFFFF;
+            /*105aa0*/
+            border: 3px solid #ff6700;
+            font-size: 24px;
+
+            margin-bottom: 20px;
+
+            /* 左右居中 */
+            /* position: absolute;
+            margin-top: 20px;
+            left: 50%;
+            transform: translate(-50%,-50%); */
+
+            transition-duration: 0.4s;
+        }
+        #xiaomis12ultra_buy_btn:hover{
+            width: 180px;
+            color: #FFFFFF;
+            background-color: #ff6700;
+        }
+        /* @media only screen and (max-width:600px){
+            img{
+                width: 260px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div id="show_phone_move_background">
+        
+        <div id="phone_photo_move">
+            <img src="https://raw.githubusercontent.com/infinityMark/-infinityMark.github.io/main/imageonline-co-transparentimage.png" alt="" id="phone_the_photo">
+                
+        </div>
+        <div>
+            <h1>生日快樂</h1>
+            <button id="xiaomis12ultra_buy_btn">鼠標滑一下</button>
+        </div>
+    </div>
+    <script>
+        var this_btn=document.getElementById("xiaomis12ultra_buy_btn")
+        this_btn.addEventListener("mousemove",function(){
+            this.innerText="生日快樂"
+        })
+        this_btn.addEventListener("mouseout",function(){
+            this.innerText="鼠標劃一下"
+        })
+
+        var show_phone_move_background=document.getElementById("show_phone_move_background")
+        var phone_the_photo=document.getElementById("phone_the_photo")
+        show_phone_move_background.addEventListener("mousemove",function(){
+            phone_the_photo.style.width="180%"
+            phone_the_photo.style.transitionDuration="0.4s"
+            show_phone_move_background.style.left="40%"
+        })
+        show_phone_move_background.addEventListener("mouseout",function(){
+            phone_the_photo.style.width="80%"
+            show_phone_move_background.style.left="50%"
+
+        })
+
+        // window.addEventListener("resize", function() {
+        //     if (window.innerWidth <= 600) {
+        //         show_phone_move_background.addEventListener("mouseout",function(){
+        //         phone_the_photo.style.width="200px"
+        //     })
+        //     } 
+        //     else {
+        //         show_phone_move_background.addEventListener("mousemove",function(){
+        //             phone_the_photo.style.width="600px"
+        //             phone_the_photo.style.transitionDuration="1s"
+        //      })
+        //     }
+        // });
+    </script>
+</body>
